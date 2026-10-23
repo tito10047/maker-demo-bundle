@@ -1,0 +1,15 @@
+{#
+ # Greets people, rendered by Tito10047\MakerDemoBundle\Controller\HelloController.
+ #
+ # Variables:
+ #   greeting  string  the greeting, e.g. "Hello Jane!"
+ #
+ # It is a fragment, without layout, so applications can display it anywhere. Override it in the
+ # templates/bundles/Tito10047MakerDemoBundle/hello.html.twig file of your application,
+ # or only its "title" block by extending '@!Tito10047MakerDemo/hello.html.twig'.
+ #}
+<section class="tito10047-maker-demo-hello" {{ stimulus_controller('tito10047/maker-demo-bundle/hello') }}>
+    <h1 class="tito10047-maker-demo-hello__title">{% block title %}{{ 'Welcome!'|trans({}, 'Tito10047MakerDemo') }}{% endblock %}</h1>
+    <p class="tito10047-maker-demo-hello__greeting">{{ greeting }}</p>
+    <button type="button" class="tito10047-maker-demo-hello__close" {{ stimulus_action('tito10047/maker-demo-bundle/hello', 'close') }}>{{ 'Close'|trans({}, 'Tito10047MakerDemo') }}</button>
+</section>
